@@ -1,0 +1,52 @@
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── uv / venv ─────────────────────────────────────────────────────────────────
+.venv/
+venv/
+# uv.lock is intentionally committed — do not add it here
+
+# ── Data (large, re-generable) ────────────────────────────────────────────────
+papers/
+qdrant_data/
+
+# ── HuggingFace model cache ───────────────────────────────────────────────────
+# specter2 downloads ~500MB of weights on first run
+# if you want to cache them in the project, exclude them from git
+.cache/
+*.bin
+*.safetensors
+*.ot
+
+# ── LangSmith / eval artifacts ───────────────────────────────────────────────
+evals/results/
+*.eval.json
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Pytest ────────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
